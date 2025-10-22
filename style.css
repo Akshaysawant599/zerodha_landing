@@ -1,0 +1,197 @@
+/* Basic reset + typography */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #424242;
+  background: #fff;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 6%;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 40;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+.logo img { width: 110px; display:block; }
+.nav-links { list-style: none; display: flex; gap: 18px; align-items:center; }
+.nav-links a { text-decoration:none; color:#424242; font-weight:500; }
+
+/* GLOBAL BUTTON */
+.primary-btn {
+  background: #387ed1;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 6%;
+}
+.hero img { max-width: 900px; width: 85%; height: auto; display:block; margin: 0 auto 28px; }
+.hero h2 { font-size: 28px; color:#222; margin-bottom:8px; }
+.hero p { color: #666; margin-bottom:18px; max-width:720px; margin-left:auto; margin-right:auto; }
+
+/* ECOSYSTEM / SECOND SECTION */
+/* Ecosystem Section */
+.ecosystem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 80px 10%;
+  background-color: #fff;
+  flex-wrap: wrap;
+}
+
+.ecosystem-content {
+  flex: 1;
+  max-width: 50%;
+  text-align: left;
+}
+
+.ecosystem-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.ecosystem-content h3 {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #333;
+}
+
+.ecosystem-content p {
+  color: #555;
+  line-height: 1.6;
+  margin-top: 5px;
+}
+
+.ecosystem-content a {
+  color: #387ed1;
+  text-decoration: none;
+}
+
+.ecosystem-image-container {
+  flex: 1;
+  max-width: 45%;
+  text-align: right;
+}
+
+.ecosystem-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.ecosystem-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.ecosystem-link {
+  color: #387ed1;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.ecosystem-link:hover {
+  color: #235a96;
+}
+
+.ecosystem-press {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* center the press image horizontally */
+  margin-top: 36px;
+}
+
+/* press image sizing */
+.press-image {
+  display: block;
+  width: 100%;
+  max-width: 720px;          /* tune as per mockup — smaller or larger */
+  height: auto;
+  opacity: 0.95;
+}
+
+
+/* PRESS image under ecosystem */
+.press-img { width: 100%; max-width: 900px; margin-top: 18px;align-items: center; }
+
+/* PRICING */
+.pricing { display:flex; gap: 20px; align-items: center; padding: 60px 6%; flex-wrap:wrap; }
+.pricing-left { flex:1; min-width: 280px; max-width: 700px; }
+.pricing-left h3 { font-size: 22px; color:#222; margin-bottom:10px; }
+.pricing-left p { color:#555; margin-bottom:8px; }
+.pricing-right { flex:1; min-width:260px; display:flex; flex-direction:column; gap:14px; }
+.price-item { display:flex; gap:14px; align-items:center; }
+.price-item img { width:90px; height:auto; }
+.price-title { font-size:20px; font-weight:700; margin-bottom:4px; color:#222; }
+.price-desc { color:#555; font-size:14px; }
+
+/* EDUCATION */
+.education { display:flex; gap:24px; align-items:center; padding:60px 6%; flex-wrap:wrap; }
+.edu-img { width: 48%; max-width:560px; min-width:260px; }
+.education-text { flex:1; min-width:260px; }
+.education-text h3 { font-size:22px; color:#222; margin-bottom:10px; }
+.education-text p { color:#555; margin-bottom:8px; }
+
+/* OPEN ACCOUNT */
+.open-account { text-align:center; padding: 56px 6%; background: #fff; }
+.open-account h3 { font-size:22px; margin-bottom:8px; color:#222; }
+.open-account p { color:#555; margin-bottom:18px; }
+
+/* FOOTER */
+.footer { background:#f7f9fb; padding:32px 6%; margin-top:20px; padding-left:90px;}
+.footer-top { display:flex; gap:20px; align-items:right; flex-wrap:wrap; margin-bottom:20px; }
+.footer-logo { width:120px; }
+.footer-press { width:320px; opacity:0.9; }
+
+.footer-links { display:flex; gap:200px; flex-wrap:wrap; margin-bottom:20px; padding-left: 150px;}
+.footer-links h4 { margin-bottom:8px; }
+.footer-links ul { list-style:none; }
+.footer-links a { text-decoration:none; color:#555; font-size:14px; display:block; margin-bottom:6px; }
+
+.footer-bottom { color:#777; font-size:13px; }
+
+.link-arrow{color: #387ed1; text-decoration: none}
+/* Responsive */
+@media (max-width:900px) {
+  .edu-img { width:100%; }
+  .education, .pricing { padding-left: 6%; padding-right: 6%; }
+  .pricing { flex-direction: column; align-items:flex-start; }
+
+  .ecosystem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ecosystem-content,
+  .ecosystem-image-container {
+    max-width: 100%;
+  }
+
+  .ecosystem-links {
+    justify-content: center;
+  }
+
+  .press-image {
+    width: 100%;
+  }
+}
